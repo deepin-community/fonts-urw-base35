@@ -1,0 +1,5 @@
+fonts-urw-base35 (20200910-deepin) stable; urgency=medium
+
+  * ['Rebuild  against by  current gcc 11.2']
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 22 Aug 2022 10:39:54 +0800
