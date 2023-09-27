@@ -1,4 +1,20 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/pkg-info.mk
+
 %:
 	dh $@
+
+override_dh_gencontrol:
+	dh_gencontrol -pgsfonts     -- -v2:$(DEB_VERSION_UPSTREAM_REVISION)
+	dh_gencontrol -pgsfonts-x11 -- -v2:$(DEB_VERSION_UPSTREAM_REVISION)
+	dh_gencontrol --remaining-packages
+
+override_dh_install:
+	dh_install
+	install -d debian/fonts-urw-base35/usr/share/fonts/X11/Type1
+	for f in fonts/*.t1; do \
+	    debian/addsegmentheaders.pl $$f \
+		| t1disasm | t1asm \
+             > debian/fonts-urw-base35/usr/share/fonts/X11/Type1/`basename $$f t1`pfb; \
+	done

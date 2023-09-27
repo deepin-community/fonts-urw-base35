@@ -1,16 +1,17 @@
 Source: fonts-urw-base35
 Section: fonts
 Priority: optional
-Maintainer: Deepin Developer <deepin-dev@deepin.org>
-Uploaders: Deepin Packages Builder <packages@deepin.org>
- Fabian Greffrath <fabian@debian.org>
+Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Uploaders:
+ Fabian Greffrath <fabian@debian.org>,
+ Roland Rosenfeld <roland@debian.org>
 Build-Depends:
- debhelper-compat (= 13)
-Standards-Version: 4.5.0
+ debhelper-compat (= 13), t1utils
+Standards-Version: 4.6.1
 Homepage: https://github.com/ArtifexSoftware/urw-base35-fonts
+Vcs-Git: https://salsa.debian.org/fonts-team/fonts-urw-base35.git
+Vcs-Browser: https://salsa.debian.org/fonts-team/fonts-urw-base35
 Rules-Requires-Root: no
-
-# Commented lines prepare the transition from gsfonts + gsfonts-x11
 
 Package: fonts-urw-base35
 Architecture: all
@@ -20,12 +21,12 @@ Depends:
 Suggests:
  fonts-freefont-otf | fonts-freefont-ttf,
  fonts-texgyre
-#Breaks:
-# gsfonts (<< 20150330-1~),
-# gsfonts-x11 (<< 20150330-1~)
-#Replaces:
-# gsfonts (<< 20150330-1~),
-# gsfonts-x11 (<< 20150330-1~)
+Breaks:
+ gsfonts (<< 2:20200910-2~),
+ gsfonts-x11 (<< 2:20200910-2~)
+Replaces:
+ gsfonts (<< 2:20200910-2~),
+ gsfonts-x11 (<< 2:20200910-2~)
 Description: font set metric-compatible with the 35 PostScript Level 2 Base Fonts
  A commercial-quality set of PostScript Type 1 fonts, metric-compatible
  with the 35 PostScript Language Level 2 Base Fonts. This package contains
@@ -43,33 +44,35 @@ Description: font set metric-compatible with the 35 PostScript Level 2 Base Font
   URW Gothic
   Z003
  .
-# This package also makes the fonts available to an X server under both
-# their "urw" names and via fonts.alias under the official "adobe" names.
-# .
+ This package also makes the fonts available to an X server under both
+ their "urw" names and via fonts.alias under the official "adobe" names.
+ .
  Extensive remakes of these fonts in the OpenType format are available in the
  GUST TeX Gyre collection in the fonts-texgyre package. The Cyrillic glyphs
  added to the now obsolete urwcyr fork of these fonts have been merged into
  the GNU FreeFont collection available in the fonts-freefont-otf or
  fonts-freefont-ttf packages.
 
-#Package: gsfonts
-#Depends:
-# fonts-urw-base35,
-# ${misc:Depends}
-#Architecture: all
-#Multi-Arch: foreign
-#Section: oldlibs
-#Priority: extra
-#Description: transitional dummy package
-# This package is a dummy transitional package. It can be safely removed.
-#
-#Package: gsfonts-x11
-#Depends:
-# fonts-urw-base35,
-# ${misc:Depends}
-#Architecture: all
-#Multi-Arch: foreign
-#Section: oldlibs
-#Priority: extra
-#Description: transitional dummy package
-# This package is a dummy transitional package. It can be safely removed.
+Package: gsfonts
+Depends:
+ fonts-urw-base35 (>= 20200910-2~),
+ ${misc:Depends}
+Breaks:
+ grace (<= 1:5.1.25-12)
+Architecture: all
+Multi-Arch: foreign
+Section: oldlibs
+Description: transitional dummy package (gsfonts -> fonts-urw-base35)
+ This package is a dummy package to enable the gsfonts to fonts-urw-base35
+ transition. It can be safely removed.
+
+Package: gsfonts-x11
+Depends:
+ fonts-urw-base35 (>= 20200910-2~),
+ ${misc:Depends}
+Architecture: all
+Multi-Arch: foreign
+Section: oldlibs
+Description: transitional dummy package (gsfonts-x11 -> fonts-urw-base35)
+ This package is a dummy package to enable the gsfonts-x11 to fonts-urw-base35
+ transition. It can be safely removed.
