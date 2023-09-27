@@ -1,0 +1,2 @@
+Tests: check-fonts-urw-base35-alias, check-fonts-urw-base35-scale
+Depends: @, coreutils

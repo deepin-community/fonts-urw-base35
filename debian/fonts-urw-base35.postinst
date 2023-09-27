@@ -2,15 +2,13 @@
 
 set -e
 
-# Commented lines prepare the transition from gsfonts + gsfonts-x11
-
-#if [ "$1" = "configure" ]
-#then
-#	if [ -x /usr/sbin/update-gsfontmap ]
-#	then
-#		update-gsfontmap
-#	fi
-#fi
+if [ "$1" = "configure" ]
+then
+	if [ -x "$(which update-gsfontmap 2>/dev/null)" ]
+	then
+		update-gsfontmap
+	fi
+fi
 
 #DEBHELPER#
 
