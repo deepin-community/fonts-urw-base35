@@ -1,0 +1,47 @@
+fonts-urw-base35 (20200910-2) experimental; urgency=medium
+
+  * In the transition from gsfonts to fonts-urw-base35 the
+    Type1 font file install paths have changes from
+    /usr/share/fonts/type1/gsfonts (old) to
+    /usr/share/fonts/type1/urw-base35 (new).
+
+    Furthermore, some of the Type1 font file names have changed
+    (.afm files accordingly):
+
+    a010013l.pfb	URWGothic-Book.t1
+    a010015l.pfb	URWGothic-Demi.t1
+    a010033l.pfb	URWGothic-BookOblique.t1
+    a010035l.pfb	URWGothic-DemiOblique.t1
+    b018012l.pfb	URWBookman-Light.t1
+    b018015l.pfb	URWBookman-Demi.t1
+    b018032l.pfb	URWBookman-LightItalic.t1
+    b018035l.pfb	URWBookman-DemiItalic.t1
+    c059013l.pfb	C059-Roman.t1
+    c059016l.pfb	C059-Bold.t1
+    c059033l.pfb	C059-Italic.t1
+    c059036l.pfb	C059-BdIta.t1
+    d050000l.pfb	D050000L.t1
+    n019003l.pfb	NimbusSans-Regular.t1
+    n019004l.pfb	NimbusSans-Bold.t1
+    n019023l.pfb	NimbusSans-Italic.t1
+    n019024l.pfb	NimbusSans-BoldItalic.t1
+    n019043l.pfb	NimbusSansNarrow-Regular.t1
+    n019044l.pfb	NimbusSansNarrow-Bold.t1
+    n019063l.pfb	NimbusSansNarrow-Oblique.t1
+    n019064l.pfb	NimbusSansNarrow-BoldOblique.t1
+    n021003l.pfb	NimbusRoman-Regular.t1
+    n021004l.pfb	NimbusRoman-Bold.t1
+    n021023l.pfb	NimbusRoman-Italic.t1
+    n021024l.pfb	NimbusRoman-BoldItalic.t1
+    n022003l.pfb	NimbusMonoPS-Regular.t1
+    n022004l.pfb	NimbusMonoPS-Bold.t1
+    n022023l.pfb	NimbusMonoPS-Italic.t1
+    n022024l.pfb	NimbusMonoPS-BoldItalic.t1
+    p052003l.pfb	P052-Roman.t1
+    p052004l.pfb	P052-Bold.t1
+    p052023l.pfb	P052-Italic.t1
+    p052024l.pfb	P052-BoldItalic.t1
+    s050000l.pfb	StandardSymbolsPS.t1
+    z003034l.pfb	Z003-MediumItalic.t1
+
+ -- Fabian Greffrath <fabian@debian.org>  Sat, 27 Aug 2022 13:21:40 +0200

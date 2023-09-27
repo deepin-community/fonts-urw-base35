@@ -1,1 +1,2 @@
-rm_conffile /etc/ghostscript/fontmap.d/10gsfonts.conf 20150330-1~
+rm_conffile /etc/ghostscript/fontmap.d/10gsfonts.conf 2:20200910-2~
+rm_conffile /etc/defoma/hints/gsfonts.hints 2:20200910-2~

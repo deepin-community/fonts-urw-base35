@@ -14,6 +14,7 @@ rm_conffile /etc/fonts/conf.d/30-urw-z003.conf 20170801-2~
 rm_conffile /etc/fonts/conf.d/61-urw-nimbus-sans-narrow.conf 20170801.1-1~
 rm_conffile /etc/fonts/conf.d/61-urw-fallback-specifics.conf 20170801.1-1~
 
-#rm_conffile /etc/ghostscript/fontmap.d/10gsfonts.conf 20150330-1~ gsfonts
-#rm_conffile /etc/X11/fonts/Type1/gsfonts-x11.alias 20150330-1~ gsfonts-x11
-#rm_conffile /etc/X11/fonts/Type1/gsfonts-x11.scale 20150330-1~ gsfonts-x11
+rm_conffile /etc/ghostscript/fontmap.d/10gsfonts.conf 2:20200910-2~ gsfonts
+rm_conffile /etc/defoma/hints/gsfonts.hints 2:20200910-2~ gsfonts
+rm_conffile /etc/X11/fonts/Type1/gsfonts-x11.alias 2:20200910-2~ gsfonts-x11
+rm_conffile /etc/X11/fonts/Type1/gsfonts-x11.scale 2:20200910-2~ gsfonts-x11
