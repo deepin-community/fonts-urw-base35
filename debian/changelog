@@ -1,3 +1,12 @@
+fonts-urw-base35 (20200910-8) unstable; urgency=medium
+
+  * Apply two post-release patches from the upstream GIT repository:
+    + Add an alias to 'Century'.
+    + Remove inappropriate generic aliases for D050000L
+      (Closes: #1064972).
+
+ -- Fabian Greffrath <fabian@debian.org>  Thu, 29 Feb 2024 22:18:26 +0100
+
 fonts-urw-base35 (20200910-7) unstable; urgency=medium
 
   [ Roland Rosenfeld ]
